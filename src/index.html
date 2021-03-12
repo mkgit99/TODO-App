@@ -19,14 +19,55 @@
     <script type="text/javascript" src="main.js"></script>
     <title>Todo app</title>
   </head>
-  <body>
-    <!-- Add dynamic number -->
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/mkgit99">Michał Kobuszewski</a>.
-    </div>
+  <!-- BODY PAGE -->
+  <body class="body">
+    <header class="page__header" id="home">
+      <div class="page__header-title">
+        <h1 class="page__header-title">TODO</h1>
+        <input
+          type="image"
+          class="page__header-icon"
+          src="./assets/icons/icon-sun.svg"
+        />
+      </div>
+    </header>
+    <section class="page__main">
+      <div class="new-todo-button">
+        <div class="burger">
+          <span class="burger__item">&nbsp;</span>
+          <span class="burger__item">&nbsp;</span>
+        </div>
+        <p>Create a new todo...</p>
+      </div>
+      <div class="todo__list">
+        <ul class="todo__list-items">
+          <li class="todo__list-item">10 minutes meditation</li>
+          <li class="todo__list-item">Pick up a hotdog</li>
+          <li class="todo__list-item">Read for 1 hour</li>
+          <li class="todo__list-item">Walk with dog</li>
+          <li class="todo__list-item">Make some code!</li>
+          <p class="todo__list-left">
+            5 items left <span>Clear Completed</span>
+          </p>
+        </ul>
+      </div>
+      <div class="todo__filter">
+        <ul class="todo__filter-items">
+          <li class="todo__filter-item"><a href="#">All</a></li>
+          <li class="todo__filter-item"><a href="#">Active</a></li>
+          <li class="todo__filter-item"><a href="#">Completed</a></li>
+        </ul>
+      </div>
+      <span class="drag-and-drop">Drag and drop to reorder list</span>
+    </section>
+    <footer class="page__footer">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/mkgit99">Michał Kobuszewski</a>
+      </p>
+    </footer>
   </body>
 </html>

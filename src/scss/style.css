@@ -146,6 +146,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
   color: #cacde8;
   overflow-x: hidden;
   max-width: 100%;
