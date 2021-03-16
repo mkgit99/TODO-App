@@ -3,10 +3,98 @@
 }
 
 .new-todo-button {
-  height: 1.5em;
-  @include flex;
-  padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 7px;
   background: $Very-Dark-Desaturated-Blue;
-  box-shadow: 0 10px 40px black;
+  box-shadow: 0 6px 20px black;
+  transition: $time-medium ease;
+  @include flex;
+  margin-bottom: 15px;
+
+  &:hover {
+    background: $Very-Dark-Grayish-Blue2;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $mobile-small) {
+    height: 1.5em;
+    padding: 10px 15px;
+  }
+}
+
+.todo__list {
+  border-radius: 7px;
+  background: $Very-Dark-Desaturated-Blue;
+  box-shadow: 0 6px 20px black;
+  transition: $time-medium ease;
+
+  &-items {
+    
+    li {
+      height: 1.5em;
+      padding: 15px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $Very-Dark-Grayish-Blue2;
+      transition: $time ease;
+      // &:before{
+      //   content: url(/src/assets/icons/icon-check.svg);
+      // }
+      
+      &:hover {
+        background: $Very-Dark-Grayish-Blue2;
+        cursor: pointer;
+      }
+    }
+  }
+  &-left {
+    padding: 20px;
+    color: $Dark-Grayish-Blue;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    span {
+      transition: $time-medium ease;
+
+      &:hover {
+        color: $Light-Grayish-Blue-hover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-small) {
+  }
+}
+
+.todo__filter {
+  border-radius: 7px;
+  background: $Very-Dark-Desaturated-Blue;
+  box-shadow: 0 6px 20px black;
+  margin-bottom: 15px;
+
+  ul {
+    @include flex;
+
+    @media screen and (max-width: $mobile-small) {
+      height: 1.5em;
+      padding: 10px 15px;
+    }
+    li {
+      padding: 0 10px;
+      color: $Dark-Grayish-Blue;
+      transition: $time-medium ease;
+
+      &:hover {
+        color: $Light-Grayish-Blue-hover;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.info {
+  @include flex;
+  margin: 40px 0;
+  color: $Very-Dark-Grayish-Blue1;
 }
