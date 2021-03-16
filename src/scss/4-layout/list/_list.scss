@@ -19,6 +19,17 @@
     height: 1.5em;
     padding: 10px 15px;
   }
+
+  &-light {
+    background: $Very-Light-Gray;
+    color: $Bright-Blue;
+    font-weight: bold;
+    box-shadow: 0 6px 20px $Light-Grayish-Blue;
+
+    &:hover {
+      background: $Light-Grayish-Blue;
+    }
+  }
 }
 
 .todo__list {
@@ -27,24 +38,34 @@
   box-shadow: 0 6px 20px black;
   transition: $time-medium ease;
 
-  &-items {
-    
-    li {
-      height: 1.5em;
-      padding: 15px 15px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid $Very-Dark-Grayish-Blue2;
-      transition: $time ease;
-      // &:before{
-      //   content: url(/src/assets/icons/icon-check.svg);
-      // }
-      
-      &:hover {
-        background: $Very-Dark-Grayish-Blue2;
-        cursor: pointer;
-      }
+  &-light {
+    background: $Very-Light-Gray;
+    box-shadow: 0 6px 20px $Light-Grayish-Blue;
+  }
+
+  &-item {
+    height: 1.5em;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $Very-Dark-Grayish-Blue1;
+    transition: $time ease;
+    // &:before{
+    //   content: url(/src/assets/icons/icon-check.svg);
+    // }
+
+    &:hover {
+      background: $Very-Dark-Grayish-Blue2;
+      cursor: pointer;
     }
+  }
+
+  &-item-light {
+    border-color: $Very-Light-Grayish-Blue;
+  }
+
+  &-item-light:hover {
+    background: $Light-Grayish-Blue;
   }
   &-left {
     padding: 20px;
@@ -53,13 +74,16 @@
     justify-content: space-between;
     margin-bottom: 15px;
 
-    span {
-      transition: $time-medium ease;
+    &-span {
+      transition: $time ease;
 
       &:hover {
         color: $Light-Grayish-Blue-hover;
         cursor: pointer;
       }
+    }
+    &-span-light:hover {
+      color: $Bright-Blue;
     }
   }
 
@@ -71,24 +95,32 @@
   border-radius: 7px;
   background: $Very-Dark-Desaturated-Blue;
   box-shadow: 0 6px 20px black;
+  transition: $time-medium ease;
   margin-bottom: 15px;
 
-  ul {
+  &-light{
+    background: $Very-Light-Gray;
+    box-shadow: 0 6px 20px $Light-Grayish-Blue;
+  }
+  &-items {
     @include flex;
 
     @media screen and (max-width: $mobile-small) {
       height: 1.5em;
       padding: 10px 15px;
     }
-    li {
-      padding: 0 10px;
-      color: $Dark-Grayish-Blue;
-      transition: $time-medium ease;
+  }
+  &-item {
+    padding: 0 10px;
+    color: $Dark-Grayish-Blue;
+    transition: $time-medium ease;
 
-      &:hover {
-        color: $Light-Grayish-Blue-hover;
-        cursor: pointer;
-      }
+    &:hover {
+      color: $Light-Grayish-Blue-hover;
+      cursor: pointer;
+    }
+    &-light:hover{
+      color: $Bright-Blue;
     }
   }
 }
@@ -97,4 +129,8 @@
   @include flex;
   margin: 40px 0;
   color: $Very-Dark-Grayish-Blue1;
+
+  &-light {
+    color: $Dark-Grayish-Blue;
+  }
 }

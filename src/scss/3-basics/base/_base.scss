@@ -8,6 +8,12 @@ body {
   max-width: 100%;
   background: url(/src/assets/images/bg-mobile-dark.jpg) no-repeat;
   background-color: $Very-Dark-Blue;
+  transition: $time ease;
+}
+.body-light{
+  color: $Very-Dark-Blue;
+  background: url(/src/assets/images/bg-mobile-light.jpg) no-repeat;
+  background-color: $Very-Light-Grayish-Blue;
 }
 
 main,

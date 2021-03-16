@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" type="text/css" href="scss/style.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <title>Todo app</title>
   </head>
 
@@ -28,6 +28,7 @@
         <input
           type="image"
           class="page__header-icon"
+          id="theme-icon"
           src="./assets/icons/icon-sun.svg"
         />
       </div>
@@ -44,7 +45,7 @@
           <li class="todo__list-item">Walk with dog</li>
           <li class="todo__list-item">Make some code!</li>
           <p class="todo__list-left">
-            5 items left <span>Clear Completed</span>
+            5 items left <span class="todo__list-left-span">Clear Completed</span>
           </p>
         </ul>
       </div>
