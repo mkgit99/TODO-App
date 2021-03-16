@@ -2,10 +2,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: $font;
-  font-size: 18px;
+  font-size: 15px;
   color: $Light-Grayish-Blue;
   overflow-x: hidden;
   max-width: 100%;
+  background: url(/src/assets/images/bg-mobile-dark.jpg) no-repeat;
   background-color: $Very-Dark-Blue;
 }
 

@@ -1,0 +1,12 @@
+.page__main {
+  margin: 0 20px;
+}
+
+.new-todo-button {
+  height: 1.5em;
+  @include flex;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: $Very-Dark-Desaturated-Blue;
+  box-shadow: 0 10px 40px black;
+}

@@ -146,10 +146,11 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   color: #cacde8;
   overflow-x: hidden;
   max-width: 100%;
+  background: url(/src/assets/images/bg-mobile-dark.jpg) no-repeat;
   background-color: #161722;
 }
 
@@ -172,5 +173,64 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+}
+
+.page__header {
+  width: 100%;
+}
+
+.page__header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 375px) {
+  .page__header-title {
+    margin: 50px 20px;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0.5em;
+    color: white;
+  }
+}
+
+.page__main {
+  margin: 0 20px;
+}
+
+.new-todo-button {
+  height: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #25273c;
+  -webkit-box-shadow: 0 10px 40px black;
+          box-shadow: 0 10px 40px black;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 11px;
 }
 /*# sourceMappingURL=style.css.map */

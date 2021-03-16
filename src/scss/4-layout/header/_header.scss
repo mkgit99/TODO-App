@@ -1,0 +1,17 @@
+.page__header {
+  width: 100%;
+  //   height: 25vh;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-small) {
+      margin: 50px 20px;
+      font-weight: bold;
+      font-size: 28px;
+      letter-spacing: 0.5em;
+      color: white;
+    }
+  }
+}
