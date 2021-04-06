@@ -2,18 +2,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: $font;
-  font-size: 15px;
   color: $Light-Grayish-Blue;
   overflow-x: hidden;
   max-width: 100%;
-  background: url(/src/assets/images/bg-mobile-dark.jpg) no-repeat;
-  background-color: $Very-Dark-Blue;
   transition: $time ease;
+
+  @media screen and (max-width: $mobile) {
+    background: url(/src/assets/images/bg-desktop-dark.jpg) no-repeat;
+    background-color: $Very-Dark-Blue;
+    font-size: 18px;
+  }
+  @media screen and (max-width: $mobile-small) {
+    background: url(/src/assets/images/bg-mobile-dark.jpg) no-repeat;
+    background-color: $Very-Dark-Blue;
+    font-size: 15px;
+  }
 }
-.body-light{
+.body-light {
   color: $Very-Dark-Blue;
-  background: url(/src/assets/images/bg-mobile-light.jpg) no-repeat;
   background-color: $Very-Light-Grayish-Blue;
+
+  @media screen and (max-width: $mobile) {
+    background: url(/src/assets/images/bg-desktop-light.jpg) no-repeat;
+  }
+  @media screen and (max-width: $mobile-small) {
+    background: url(/src/assets/images/bg-mobile-light.jpg) no-repeat;
+  }
 }
 
 main,

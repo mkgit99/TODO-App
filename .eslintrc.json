@@ -6,7 +6,9 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "commonjs": true,
+    "jquery": true
   },
   "extends": ["eslint:recommended", "prettier"],
   "plugins": ["prettier"],

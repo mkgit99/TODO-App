@@ -4,13 +4,29 @@
   &-title {
     display: flex;
     justify-content: space-between;
+    letter-spacing: 0.4em;
+    color: white;
+    margin: 50px 20px;
+    font-weight: bold;
 
+    @media screen and (max-width: $mobile) {
+      font-size: 34px;
+    }
     @media screen and (max-width: $mobile-small) {
-      margin: 50px 20px;
-      font-weight: bold;
       font-size: 28px;
-      letter-spacing: 0.4em;
-      color: white;
+    }
+  }
+  &-icon {
+    &:focus {
+      outline: none;
+    }
+    @media screen and (max-width: $mobile) {
+      height: 34px;
+      width: 34px;
+    }
+    @media screen and (max-width: $mobile-small) {
+      height: 28px;
+      width: 28px;
     }
   }
 }

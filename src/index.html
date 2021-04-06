@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="scss/style.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -28,24 +34,74 @@
         <input
           type="image"
           class="page__header-icon"
+          onclick="changeTheme()"
           id="theme-icon"
           src="./assets/icons/icon-sun.svg"
         />
       </div>
     </header>
     <section class="page__main">
-      <div class="new-todo-button">
-        <p>Create a new todo...</p>
-      </div>
+      <form>
+        <input
+          class="text-input"
+          type="text"
+          name="add"
+          placeholder="Write new task and press enter..."
+        />
+      </form>
       <div class="todo__list">
-        <ul class="todo__list-items">
-          <li class="todo__list-item">10 minutes meditation</li>
-          <li class="todo__list-item">Pick up a hotdog</li>
-          <li class="todo__list-item">Read for 1 hour</li>
-          <li class="todo__list-item">Walk with dog</li>
-          <li class="todo__list-item">Make some code!</li>
+        <ul class="todo__list-items" id="task-list">
+          <li class="todo__list-item" id="addtask">
+            <span>10 minutes meditation</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>Do something</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>And something else</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>10 minutes meditation</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>Do something</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>And something else</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>10 minutes meditation</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>Do something</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>And something else</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>10 minutes meditation</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>Do something</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="addtask">
+            <span>And something else</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
           <p class="todo__list-left">
-            5 items left <span class="todo__list-left-span">Clear Completed</span>
+            3 items left
+            <span class="todo__list-left-span">Clear Completed</span>
           </p>
         </ul>
       </div>
