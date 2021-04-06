@@ -19,38 +19,44 @@ function changeTheme() {
     document.getElementById('theme-icon').src === moon ? sun : moon;
 }
 
-//variables
-// const newTodo = document.getElementById('new-todo');
-// const taskList = document.getElementById('task-list');
-// const checkList = document.getElementById('checked-list');
+const body = document.querySelector('body');
+const addForm = document.getElementById('add-form');
+const list = document.getElementById('todo-list');
+const input = document.getElementById('text-input');
 
-//Event Listeners
-eventListeners();
+const generateTemplate = (todo) => {
+  let html;
+  if (body.classList.contains('body-light')) {
+    html = `
+    <li class="todo__list-item todo__list-item-light" id="add-task">
+      <span>${todo}</span>
+      <i class="far fa-trash-alt delete"></i>
+    </li>
+    `;
+  } else {
+    html = `
+    <li class="todo__list-item" id="add-task">
+      <span>${todo}</span>
+      <i class="far fa-trash-alt delete"></i>
+    </li>
+    `;
+  }
+  list.innerHTML += html;
+};
 
-function eventListeners() {
-  //Form Submission
-  document.querySelector('#new-todo').addEventListener('submit', newTask);
-
-  //Remove tasks from TaskList
-  // taskList.addEventListener('click', completeTask);
-
-  //Remove tasks from TaskList
-  // taskList.addEventListener('click', removeTask);
-
-  //Document
-  // document.addEventListener('DOMContentLoaded', localStorageOnLoad);
-}
-
-function newTask(e) {
+addForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const task = document.getElementById('addtask').value;
+  const todoText = input.value;
+  if (todoText) {
+    generateTemplate(todoText);
+    input.value = '';
+  }
+});
 
-  const li = document.createElement('li');
-  li.textContent = task;
-
-  //Print aleart
-  alert('Task added!');
-
-  this.reset();
-}
+// Delete Todos
+list.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+});

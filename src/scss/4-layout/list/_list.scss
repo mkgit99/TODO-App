@@ -61,23 +61,25 @@ form {
     border-bottom: 1px solid $Very-Dark-Grayish-Blue1;
     transition: $time ease;
 
-    & span {
-      text-decoration: line-through;
-    }
     &:hover {
       background: $Very-Dark-Grayish-Blue2;
       cursor: pointer;
     }
+    &-light {
+      border-color: $Very-Light-Grayish-Blue;
+      font-weight: bold;
+    }
+  
+    &-light:hover {
+      background: $Light-Grayish-Blue;
+    }
   }
 
-  &-item-light {
-    border-color: $Very-Light-Grayish-Blue;
-    font-weight: bold;
-  }
+  
+}
 
-  &-item-light:hover {
-    background: $Light-Grayish-Blue;
-  }
+.todo__about {
+  
   &-left {
     padding: 20px;
     color: $Dark-Grayish-Blue;

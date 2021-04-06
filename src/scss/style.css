@@ -340,10 +340,6 @@ form {
   transition: 0.2s ease;
 }
 
-.todo__list-item span {
-  text-decoration: line-through;
-}
-
 .todo__list-item:hover {
   background: #393a4c;
   cursor: pointer;
@@ -358,7 +354,7 @@ form {
   background: #cacde8;
 }
 
-.todo__list-left {
+.todo__about-left {
   padding: 20px;
   color: #777a92;
   display: -webkit-box;
@@ -370,17 +366,17 @@ form {
   margin-bottom: 15px;
 }
 
-.todo__list-left-span {
+.todo__about-left-span {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
-.todo__list-left-span:hover {
+.todo__about-left-span:hover {
   color: #e4e5f1;
   cursor: pointer;
 }
 
-.todo__list-left-span-light:hover {
+.todo__about-left-span-light:hover {
   color: #3a7bfd;
 }
 
