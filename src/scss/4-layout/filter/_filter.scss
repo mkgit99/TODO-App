@@ -1,0 +1,51 @@
+.todo__filter {
+    border-radius: 7px;
+    background: $Very-Dark-Desaturated-Blue;
+    box-shadow: 0 6px 20px black;
+    transition: $time-medium ease;
+    margin-bottom: 15px;
+  
+    &-light {
+      background: $Very-Light-Gray;
+      box-shadow: 0 6px 20px $Light-Grayish-Blue;
+    }
+    &-items {
+      @include flex;
+  
+      @media screen and (max-width: $mobile) {
+        padding: 15px 15px;
+      }
+      @media screen and (max-width: $mobile-small) {
+        padding: 12px 15px;
+      }
+    }
+    &-item {
+      color: $Dark-Grayish-Blue;
+      transition: $time-medium ease;
+  
+      @media screen and (max-width: $mobile) {
+        padding: 0 20px;
+      }
+      @media screen and (max-width: $mobile-small) {
+        padding: 0 10px;
+      }
+  
+      &:hover {
+        color: $Light-Grayish-Blue-hover;
+        cursor: pointer;
+      }
+      &-light:hover {
+        color: $Bright-Blue;
+      }
+    }
+  }
+  
+  .info {
+    @include flex;
+    margin: 40px 0;
+    color: $Very-Dark-Grayish-Blue1;
+  
+    &-light {
+      color: $Dark-Grayish-Blue;
+    }
+  }
