@@ -26,16 +26,15 @@
       border-color: $Very-Light-Grayish-Blue;
       font-weight: bold;
     }
-
     &-light:hover {
       background: $Light-Grayish-Blue;
     }
+    // & .completed {
+    //   text-decoration: line-through;
+    // }
   }
   & .task_content {
     margin-left: 8px;
-  }
-  & .completed {
-    text-decoration: line-through;
   }
 }
 

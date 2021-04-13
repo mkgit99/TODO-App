@@ -17,18 +17,17 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="scss/style.css" />
     <title>Todo app</title>
   </head>
-
+  <!-- integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" -->
   <!-- BODY PAGE -->
   <body class="body">
     <header class="page__header" id="home">
       <div class="page__header-title">
-        <h1>TODO</h1>
+        <h1>What to do?</h1>
         <input
           type="image"
           class="page__header-icon"
@@ -50,14 +49,45 @@
       </form>
       <div class="todo__list">
         <ul class="todo__list-items" id="todo-list">
-          <li class="todo__list-item" id="add-task">
-            <span>10 minutes meditation</span>
+          <!-- <li class="todo__list-item" id="add-task">
+            <div>
+              <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
+              <span class="task_content">1</span>
+            </div>
             <i class="far fa-trash-alt delete"></i>
           </li>
+          <li class="todo__list-item" id="add-task">
+            <div>
+              <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
+              <span class="task_content">2</span>
+            </div>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="add-task">
+            <div>
+              <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
+              <span class="task_content">3</span>
+            </div>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="add-task">
+            <div>
+              <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
+              <span class="task_content">4</span>
+            </div>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="todo__list-item" id="add-task">
+            <div>
+              <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
+              <span class="task_content">5</span>
+            </div>
+            <i class="far fa-trash-alt delete"></i>
+          </li> -->
         </ul>
         <div class="todo__about">
           <p class="todo__about-left">
-            1 items left
+            <span class="counter" id="counter">0 items left</span>
             <span class="todo__about-left-span">Clear Completed</span>
           </p>
         </div>  

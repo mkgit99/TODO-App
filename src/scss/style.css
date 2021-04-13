@@ -309,10 +309,6 @@ section {
   margin-left: 8px;
 }
 
-.todo__list .completed {
-  text-decoration: line-through;
-}
-
 .todo__about-left {
   padding: 20px;
   color: #777a92;
