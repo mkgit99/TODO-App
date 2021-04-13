@@ -11,24 +11,12 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $('.task_content').on('click', function () {
-    $('.task_content').toggleClass('completed');
-  });
-});
-
-$(document).ready(function () {
-  $('.fa-circle').on('click', function () {
-    $('.task_content').toggleClass('completed');
-  });
-});
-
 const body = document.querySelector('body');
 const addForm = document.getElementById('add-form');
 const list = document.getElementById('todo-list');
 const input = document.getElementById('text-input');
 let listLen = document.getElementById('todo-list');
-let spanTag = document.getElementById('counter');
+let spanCounter = document.getElementById('counter');
 
 function changeTheme() {
   let sun = './assets/icons/icon-sun.svg';
@@ -54,7 +42,7 @@ const generateCounter = (count) => {
   span = `
     <span class="counter" id="counter">${count} items left</span>
     `;
-  spanTag.innerHTML = span;
+  spanCounter.innerHTML = span;
 };
 
 const generateTemplate = (todo) => {
@@ -63,7 +51,7 @@ const generateTemplate = (todo) => {
     html = `
     <li class="todo__list-item todo__list-item-light" id="add-task">
       <div>
-        <i class="fas fa-circle fa-lg" style="color: rgba(58, 123, 253, 0.4);"></i>
+        <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
         <span class="task_content">${todo}</span>
       </div>
       <i class="far fa-trash-alt delete"></i>
@@ -73,7 +61,7 @@ const generateTemplate = (todo) => {
     html = `
     <li class="todo__list-item" id="add-task">
       <div>
-        <i class="fas fa-circle fa-lg" style="color: rgba(58, 123, 253, 0.4);"></i>
+        <i class="fas fa-circle fa-lg" id="uncompleted" style="color: rgba(58, 123, 253, 0.4);"></i>
         <span class="task_content">${todo}</span>
       </div>
       <i class="far fa-trash-alt delete"></i>
@@ -101,4 +89,36 @@ list.addEventListener('click', (e) => {
     e.target.parentElement.remove();
     countTodos();
   }
+});
+
+// Completed Todos
+list.addEventListener('click', (e) => {
+  const circle = e.target;
+  const content = circle.parentElement;
+  if (e.target.classList.contains('fa-circle')) {
+    circle.classList.remove('fa-circle');
+    circle.classList.add('fa-check-circle');
+    circle.id = 'completed';
+    content.style.textDecoration = 'line-through';
+  } else if (e.target.classList.contains('fa-check-circle')) {
+    circle.classList.remove('fa-check-circle');
+    circle.classList.add('fa-circle');
+    circle.id = 'uncompleted';
+    content.style.textDecoration = 'none';
+  }
+});
+
+$(document).ready(function () {
+  $('.todo__about-left-span').on('click', function () {
+    let listItem = document.getElementById('add-task');
+    // let prawie = listItem.getElementsByTagName('div');
+    // let koniec = prawie.getElementsByTagName('i');
+
+    for (var i = 0; i < listLen.getElementsByTagName('li').length; i++) {
+      if (i.classList.contains('fa-check-circle')) {
+        listItem[i].remove();
+        countTodos();
+      }
+    }
+  });
 });
